@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="canonical" href="https://www.hexstreamsoft.com/libraries/class-options/" />
+    <meta name="author" content="Jean-Philippe Paradis" />
+    <link rel="author" href="https://abc.hexstream.xyz/" />
+    <link rel="license" href="https://www.hexstreamsoft.com/UNLICENSE" />
+    <meta name="description" content="Provides easy access to the defining class and its options during initialization." />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>class-options | Libraries | HexstreamSoft</title>
+    <link href="https://www.hexstreamsoft.com/css/global.css" rel="stylesheet" type="text/css" />
+    <link href="https://www.hexstreamsoft.com/libraries/libraries.css" rel="stylesheet" type="text/css" />
+    <link href="https://global.hexstreamsoft.com/css/cl-definitions.css" rel="stylesheet" type="text/css" />
+    <script src="https://global.hexstreamsoft.com/scripts/global.js"></script>
+    <script src="https://www.hexstreamsoft.com/scripts/global.js"></script>
+    <script src="https://www.hexstreamsoft.com/libraries/libraries.js" defer></script>
+  </head>
+
+  <body>
+
+    <nav id="top-nav">
+
+      <div class="main">
+
+        <div class="breadcrumbs">
+          <a href="https://www.hexstreamsoft.com/">HexstreamSoft</a>
+          <span class="crumb"><span class="s"> » </span><a href="https://www.hexstreamsoft.com/libraries/">Libraries</a></span>
+          <span class="crumb"><span class="s"> » </span><a class="here">class-options</a></span>
+        </div>
+
+        <nav class="tabs" id="meta-nav">
+          <ul>
+            <li><a class="github" href="https://github.com/Hexstream/class-options"><span>See on GitHub</span></a></li>
+          </ul>
+        </nav>
+
+      </div>
+
+      <p id="last-updated"><span>This page was last updated on </span><time datetime="2020-08-23">23 august 2020</time><span>.</span></p>
+
+    </nav>
+
+    <main>
+
+      <header id="page-header">
+        <h1>class-options</h1>
+      </header>
+
+      <div class="tags contains-groups">
+        <div class="group prominent">
+          <span class="tag hv license">
+            <span class="h">License<span>:</span></span>
+            <span class="v">Public Domain</span>
+          </span>
+          <span class="s">, </span>
+          <span class="tag hv quicklisp">
+            <span class="h">Load it with Quicklisp<span>:</span></span>
+            <code class="v">(ql:quickload "class-options")</code>
+          </span>
+        </div>
+        <div class="group">
+          <span class="tag hv">
+            <span class="h">Library type<span>:</span></span>
+            <span class="v">Convenience features</span>
+          </span>
+          <span class="s">, </span>
+          <span class="tag hv">
+            <span class="h">Project complexity<span>:</span></span>
+            <span class="v">Trivial/Simple</span>
+          </span>
+        </div>
+      </div>
+
+      <nav class="tabs" id="further-info">
+        <ul>
+          <li><a href="https://www.hexstreamsoft.com/libraries/releases/latest-versions/#class-options">Latest release</a></li>
+          <li><a href="https://www.hexstreamsoft.com/libraries/dependencies/#class-options">Dependencies</a></li>
+        </ul>
+        <ul>
+          <li><a href="https://www.hexstreamsoft.com/libraries/external-pages-xref/#class-options">External library pages</a></li>
+        </ul>
+      </nav>
+
+      <section id="introduction">
+
+        <p><dfn><code class="relevant">class-options</code></dfn> provides easy access to the defining class and its options during initialization.</p>
+
+      </section>
+
+      <nav class="tabs">
+        <ul>
+          <li><a href="#dictionary">Dictionary</a></li>
+        </ul>
+      </nav>
+
+      <section id="dictionary">
+
+        <h1 class="breadcrumbs-bar">
+          <span class="section-relative-nav">
+            <a href="#dictionary" class="anchor">⚓</a>
+          </span>
+          <span class="breadcrumbs">
+            <a class="here">Dictionary</a>
+          </span>
+        </h1>
+
+        <nav class="tabs">
+          <ul>
+            <li><a href="#dictionary_class-options"><span class="type">Package</span> <code>class-options</code></a></li>
+            <li><a href="#dictionary_class-access">Class access</a></li>
+            <li><a href="#dictionary_options-access">Options access</a></li>
+            <li><a href="#dictionary_operation-access">Operation access</a></li>
+            <li><a href="#dictionary_read-error"><span class="type">Condition</span> <code>read-error</code></a></li>
+          </ul>
+        </nav>
+
+        <section id="dictionary_class-options">
+
+          <h1 class="breadcrumbs-bar">
+            <span class="section-relative-nav">
+              <a href="#dictionary_class-options" class="anchor">⚓</a>
+            </span>
+            <span class="breadcrumbs">
+              <a href="#dictionary">Dictionary</a>
+              <span class="crumb"><span class="s"> » </span><a class="here">class-options</a></span>
+            </span>
+          </h1>
+
+          <article class="package definition">
+
+            <h1><span class="type">Package</span> <span class="name self">class-options</span></h1>
+
+            <section class="description">
+              <h1>Description</h1>
+              <p>All symbols from this package should normally be explicitly qualified, such as <code class="relevant"><a href="#dictionary_class">class-options:class</a></code>.<br />Don't <code>(:use)</code>!</p>
+            </section>
+
+          </article>
+
+        </section>
+
+        <section id="dictionary_class-access">
+
+          <h1 class="breadcrumbs-bar">
+            <span class="section-relative-nav">
+              <a href="#dictionary_class-access" class="anchor">⚓</a>
+            </span>
+            <span class="breadcrumbs">
+              <a href="#dictionary">Dictionary</a>
+              <span class="crumb"><span class="s"> » </span><a class="here">Class access</a></span>
+            </span>
+          </h1>
+
+          <nav class="tabs">
+            <ul>
+              <li><a href="#dictionary_class-mixin"><span class="type">Class</span> <code>class-mixin</code></a></li>
+              <li><a href="#dictionary_class"><span class="type">Function</span> <code>class</code></a></li>
+            </ul>
+          </nav>
+
+          <section id="dictionary_class-mixin">
+
+            <h1 class="breadcrumbs-bar">
+              <span class="section-relative-nav">
+                <a href="#dictionary_class-mixin" class="anchor">⚓</a>
+              </span>
+              <span class="breadcrumbs">
+                <a href="#dictionary">Dictionary</a>
+                <span class="crumb"><span class="s"> » </span><a href="#dictionary_class-access">Class access</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">class-mixin</a></span>
+              </span>
+            </h1>
+
+            <article class="class definition">
+
+              <h1><span class="type">Class</span> <span class="name self">class-options:class-mixin</span></h1>
+              <p class="direct-superclasses"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/t_std_cl.htm" target="_blank">standard-class</a></p>
+
+              <section class="description">
+                <h1>Description</h1>
+                <p>Simply inherit from this class, then you can easily retrieve the class during initialization or reinitialization by calling <code class="relevant"><a href="#dictionary_class">class-options:class</a></code>.</p>
+              </section>
+
+            </article>
+
+            <article class="method definition" id="dictionary_initialize-instance_around_class-mixin">
+
+              <h1><span class="type">Method</span> <span class="name self">initialize-instance :around</span></h1>
+
+              <p class="args-and-retvals">(<var>class</var> <code class="specializer relevant"><a href="#dictionary_class-mixin">class-options:class-mixin</a></code>) &amp;key =&gt; <var>class</var></p>
+
+              <section class="description">
+                <h1>Description</h1>
+                <p>Binds <var>class</var> as the value of an internal special variable, then calls the next method.</p>
+                <p>Call <code class="relevant"><a href="#dictionary_class">class-options:class</a></code> to retrieve <var>class</var>.</p>
+              </section>
+
+            </article>
+
+            <article class="method definition" id="dictionary_reinitialize-instance_around_class-mixin">
+
+              <h1><span class="type">Method</span> <span class="name self">reinitialize-instance :around</span></h1>
+
+              <p class="args-and-retvals">(<var>class</var> <code class="specializer relevant"><a href="#dictionary_class-mixin">class-options:class-mixin</a></code>) &amp;key =&gt; <var>class</var></p>
+
+              <section class="description">
+                <h1>Description</h1>
+                <p>Behaves the same as the above method.</p>
+              </section>
+
+            </article>
+
+          </section>
+
+          <section id="dictionary_class">
+
+            <h1 class="breadcrumbs-bar">
+              <span class="section-relative-nav">
+                <a href="#dictionary_class" class="anchor">⚓</a>
+              </span>
+              <span class="breadcrumbs">
+                <a href="#dictionary">Dictionary</a>
+                <span class="crumb"><span class="s"> » </span><a href="#dictionary_class-access">Class access</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">class</a></span>
+              </span>
+            </h1>
+
+            <article class="function definition">
+
+              <h1><span class="type">Function</span> <span class="name self">class-options:class</span></h1>
+
+              <p class="args-and-retvals">=&gt; <var>defining-class</var></p>
+
+              <section class="arguments-and-values">
+                <h1>Arguments and Values</h1>
+                <ul>
+                  <li><var>defining-class</var> -- A class.</li>
+                </ul>
+              </section>
+
+              <section class="description">
+                <h1>Description</h1>
+                <p>If a class that inherits from <code class="relevant"><a href="#dictionary_class-mixin">class-options:class-mixin</a></code> is currently being defined or redefined, then return that class.</p>
+                <p>Else, <code>(error 'class-options:read-error :reader 'class-options:class :required-mixin 'class-options:class-mixin)</code>.</p>
+              </section>
+
+            </article>
+
+          </section>
+
+          <nav class="end-of-section-indicator">
+            <a href="#dictionary_class-access">
+              "<span>Class access</span>" end.
+            </a>
+          </nav>
+
+        </section>
+
+        <section id="dictionary_options-access">
+
+          <h1 class="breadcrumbs-bar">
+            <span class="section-relative-nav">
+              <a href="#dictionary_options-access" class="anchor">⚓</a>
+            </span>
+            <span class="breadcrumbs">
+              <a href="#dictionary">Dictionary</a>
+              <span class="crumb"><span class="s"> » </span><a class="here">Options access</a></span>
+            </span>
+          </h1>
+
+          <nav class="tabs">
+            <ul>
+              <li><a href="#dictionary_options-mixin"><span class="type">Class</span> <code>options-mixin</code></a></li>
+              <li><a href="#dictionary_options"><span class="type">Function</span> <code>options</code></a></li>
+              <li><a href="#dictionary_canonicalize-options"><span class="type">Generic function</span> <code>canonicalize-options</code></a></li>
+            </ul>
+          </nav>
+
+          <section id="dictionary_options-mixin">
+
+            <h1 class="breadcrumbs-bar">
+              <span class="section-relative-nav">
+                <a href="#dictionary_options-mixin" class="anchor">⚓</a>
+              </span>
+              <span class="breadcrumbs">
+                <a href="#dictionary">Dictionary</a>
+                <span class="crumb"><span class="s"> » </span><a href="#dictionary_options-access">Options access</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">options-mixin</a></span>
+              </span>
+            </h1>
+
+            <article class="class definition">
+
+              <h1><span class="type">Class</span> <span class="name self">class-options:options-mixin</span></h1>
+              <p class="direct-superclasses"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/t_std_cl.htm" target="_blank">standard-class</a></p>
+
+              <section class="description">
+                <h1>Description</h1>
+                <p>Simply inherit from this class, then you can easily retrieve the canonicalized class options during initialization or reinitialization by calling <code class="relevant"><a href="#dictionary_class">class-options:options</a></code>.</p>
+              </section>
+
+            </article>
+
+            <article class="method definition" id="dictionary_initialize-instance_around_options-mixin">
+
+              <h1><span class="type">Method</span> <span class="name self">initialize-instance :around</span></h1>
+
+              <p class="args-and-retvals">(<var>class</var> <code class="specializer relevant"><a href="#dictionary_class-mixin">class-options:options-mixin</a></code>) &amp;key =&gt; <var>class</var></p>
+
+              <section class="description">
+                <h1>Description</h1>
+                <p>Binds the result of calling <code>(apply #'<code class="relevant"><a href="#dictionary_canonicalize-options">class-options:canonicalize-options</a></code> <var>class</var> <var>options</var>)</code> as the value of an internal special variable, then calls the next method with <var>class</var> and <var>canonicalized-options</var>.</p>
+                <p>During the call to <code class="relevant"><a href="#dictionary_canonicalize-options">class-options:canonicalize-options</a></code>, <code class="relevant"><a href="#dictionary_operation">class-options:operation</a></code> can be called to determine if we are defining or redefining the class, regardless of if <var>class</var> inherits from <code class="relevant"><a href="#dictionary_operation-mixin">class-options:operation-mixin</a></code> or not.</p>
+                <p>Call <code class="relevant"><a href="#dictionary_options">class-options:options</a></code> to retrieve <var>canonicalized-options</var>.</p>
+              </section>
+
+            </article>
+
+            <article class="method definition" id="dictionary_reinitialize-instance_around_options-mixin">
+
+              <h1><span class="type">Method</span> <span class="name self">reinitialize-instance :around</span></h1>
+
+              <p class="args-and-retvals">(<var>class</var> <code class="specializer relevant"><a href="#dictionary_class-mixin">class-options:options-mixin</a></code>) &amp;key =&gt; <var>class</var></p>
+
+              <section class="description">
+                <h1>Description</h1>
+                <p>Behaves the same as the above method, of course using <code>reinitialize-instance</code> as the <code class="relevant"><a href="#dictionary_operation">class-options:operation</a></code>.</p>
+              </section>
+
+            </article>
+
+          </section>
+
+          <section id="dictionary_options">
+
+            <h1 class="breadcrumbs-bar">
+              <span class="section-relative-nav">
+                <a href="#dictionary_options" class="anchor">⚓</a>
+              </span>
+              <span class="breadcrumbs">
+                <a href="#dictionary">Dictionary</a>
+                <span class="crumb"><span class="s"> » </span><a href="#dictionary_options-access">Options access</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">options</a></span>
+              </span>
+            </h1>
+
+            <article class="function definition">
+
+              <h1><span class="type">Function</span> <span class="name self">class-options:options</span></h1>
+
+              <p class="args-and-retvals">=&gt; <var>defining-class</var></p>
+
+              <section class="arguments-and-values">
+                <h1>Arguments and Values</h1>
+                <ul>
+                  <li><var>defining-class</var> -- A class.</li>
+                </ul>
+              </section>
+
+              <section class="description">
+                <h1>Description</h1>
+                <p>If a class that inherits from <code class="relevant"><a href="#dictionary_options-mixin">class-options:options-mixin</a></code> is currently being defined or redefined, then return the canonicalized options for that class.</p>
+                <p>Else, <code>(error 'class-options:read-error :reader 'class-options:options :required-mixin 'class-options:options-mixin)</code>.</p>
+              </section>
+
+            </article>
+
+          </section>
+
+          <section id="dictionary_canonicalize-options">
+
+            <h1 class="breadcrumbs-bar">
+              <span class="section-relative-nav">
+                <a href="#dictionary_canonicalize-options" class="anchor">⚓</a>
+              </span>
+              <span class="breadcrumbs">
+                <a href="#dictionary">Dictionary</a>
+                <span class="crumb"><span class="s"> » </span><a href="#dictionary_options-access">Options access</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">canonicalize-options</a></span>
+              </span>
+            </h1>
+
+            <article class="generic-function definition">
+
+              <h1><span class="type">Generic Function</span> <span class="name self">class-options:canonicalize-options</span></h1>
+
+              <p class="args-and-retvals"><var>class</var> &amp;rest <var>options</var> &amp;key &amp;allow-other-keys =&gt; <var>canonicalized-options</var></p>
+
+              <section class="arguments-and-values">
+                <h1>Arguments and Values</h1>
+                <ul>
+                  <li><var>class</var> -- A class.</li>
+                  <li><var>options</var> -- A plist.</li>
+                </ul>
+              </section>
+
+              <section class="description">
+                <h1>Description</h1>
+                <p>Canonicalizes <var>options</var> for <var>class</var>, which is <a href="https://clos-mop.hexstreamsoft.com/generic-functions-and-methods/#initialization-of-class-metaobjects_initargs" target="_blank">its initargs</a>.</p>
+              </section>
+
+              <section class="methods">
+                <h1>Methods</h1>
+
+                <article class="method definition" id="dictionary_canonicalize-options_class">
+
+                  <h1><span class="type">Method</span> <span class="name self">class-options:canonicalize-options</span></h1>
+
+                  <p class="args-and-retvals">(<var>class</var> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/t_class.htm" target="_blank">class</a>) &amp;rest <var>options</var> =&gt; <var>options</var></p>
+
+                  <section class="description">
+                    <h1>Description</h1>
+                    <p>Returns <var>options</var>.</p>
+                  </section>
+
+                </article>
+
+              </section>
+
+            </article>
+
+          </section>
+
+          <nav class="end-of-section-indicator">
+            <a href="#dictionary_options-access">
+              "<span>Options access</span>" end.
+            </a>
+          </nav>
+
+        </section>
+
+        <section id="dictionary_operation-access">
+
+          <h1 class="breadcrumbs-bar">
+            <span class="section-relative-nav">
+              <a href="#dictionary_operation-access" class="anchor">⚓</a>
+            </span>
+            <span class="breadcrumbs">
+              <a href="#dictionary">Dictionary</a>
+              <span class="crumb"><span class="s"> » </span><a class="here">Operation access</a></span>
+            </span>
+          </h1>
+
+          <nav class="tabs">
+            <ul>
+              <li><a href="#dictionary_operation-mixin"><span class="type">Class</span> <code>operation-mixin</code></a></li>
+              <li><a href="#dictionary_operation"><span class="type">Function</span> <code>operation</code></a></li>
+            </ul>
+          </nav>
+
+          <section id="dictionary_operation-mixin">
+
+            <h1 class="breadcrumbs-bar">
+              <span class="section-relative-nav">
+                <a href="#dictionary_operation-mixin" class="anchor">⚓</a>
+              </span>
+              <span class="breadcrumbs">
+                <a href="#dictionary">Dictionary</a>
+                <span class="crumb"><span class="s"> » </span><a href="#dictionary_operation-access">Operation access</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">operation-mixin</a></span>
+              </span>
+            </h1>
+
+            <article class="class definition">
+
+              <h1><span class="type">Class</span> <span class="name self">class-options:operation-mixin</span></h1>
+              <p class="direct-superclasses"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/t_std_cl.htm" target="_blank">standard-class</a></p>
+
+              <section class="description">
+                <h1>Description</h1>
+                <p>Simply inherit from this class, then you can easily figure out if the class is being defined or redefined by calling <code class="relevant"><a href="#dictionary_operation">class-options:operation</a></code>.</p>
+              </section>
+
+            </article>
+
+            <article class="method definition" id="dictionary_initialize-instance_around_operation-mixin">
+
+              <h1><span class="type">Method</span> <span class="name self">initialize-instance :around</span></h1>
+
+              <p class="args-and-retvals">(<var>class</var> <code class="specializer relevant"><a href="#dictionary_operation-mixin">class-options:operation-mixin</a></code>) &amp;key =&gt; <var>class</var></p>
+
+              <section class="description">
+                <h1>Description</h1>
+                <p>Binds the symbol <code>initialize-instance</code> as the value of an internal special variable, then calls the next method.</p>
+                <p>Call <code class="relevant"><a href="#dictionary_class">class-options:operation</a></code> to retrieve the symbol.</p>
+              </section>
+
+            </article>
+
+            <article class="method definition" id="dictionary_reinitialize-instance_around_operation-mixin">
+
+              <h1><span class="type">Method</span> <span class="name self">reinitialize-instance :around</span></h1>
+
+              <p class="args-and-retvals">(<var>class</var> <code class="specializer relevant"><a href="#dictionary_operation-mixin">class-options:operation-mixin</a></code>) &amp;key =&gt; <var>class</var></p>
+
+              <section class="description">
+                <h1>Description</h1>
+                <p>Behaves the same as the above method, except the symbol <code>reinitialize-instance</code> is used.</p>
+              </section>
+
+            </article>
+
+          </section>
+
+          <section id="dictionary_operation">
+
+            <h1 class="breadcrumbs-bar">
+              <span class="section-relative-nav">
+                <a href="#dictionary_operation" class="anchor">⚓</a>
+              </span>
+              <span class="breadcrumbs">
+                <a href="#dictionary">Dictionary</a>
+                <span class="crumb"><span class="s"> » </span><a href="#dictionary_operation-access">Operation access</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">operation</a></span>
+              </span>
+            </h1>
+
+            <article class="function definition">
+
+              <h1><span class="type">Function</span> <span class="name self">class-options:operation</span></h1>
+
+              <p class="args-and-retvals">=&gt; <var>operation</var></p>
+
+              <section class="arguments-and-values">
+                <h1>Arguments and Values</h1>
+                <ul>
+                  <li><var>operation</var> -- The symbol <code>initialize-instance</code> or <code>reinitialize-instance</code>.</li>
+                </ul>
+              </section>
+
+              <section class="description">
+                <h1>Description</h1>
+                <p>If a class that inherits from <code class="relevant"><a href="#dictionary_operation-mixin">class-options:operation-mixin</a></code> is currently being defined or redefined,<br />or <code class="relevant"><a href="#dictionary_canonicalize-options">class-options:canonicalize-options</a></code> is being called during initialization or reinitialization of a <code class="relevant"><a href="#dictionary_options-mixin">class-options:options-mixin</a></code>,<br />then return the symbol <code>initialize-instance</code> or <code>reinitialize-instance</code>, respectively.</p>
+                <p>Else, <code>(error 'class-options:read-error :reader 'class-options:operation :required-mixin 'class-options:operation-mixin)</code>.</p>
+              </section>
+
+            </article>
+
+          </section>
+
+          <nav class="end-of-section-indicator">
+            <a href="#dictionary_operation-access">
+              "<span>Operation access</span>" end.
+            </a>
+          </nav>
+
+        </section>
+
+        <section id="dictionary_read-error">
+
+          <h1 class="breadcrumbs-bar">
+            <span class="section-relative-nav">
+              <a href="#dictionary_read-error" class="anchor">⚓</a>
+            </span>
+            <span class="breadcrumbs">
+              <a href="#dictionary">Dictionary</a>
+              <span class="crumb"><span class="s"> » </span><a class="here">read-error</a></span>
+            </span>
+          </h1>
+
+          <article class="class definition">
+
+            <h1><span class="type">Condition</span> <span class="name self">class-options:read-error</span></h1>
+            <p class="direct-superclasses"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/e_error.htm" target="_blank">error</a></p>
+
+            <section class="description">
+              <h1>Description</h1>
+              <p>Slots:</p>
+              <pre><code>((<var>reader</var> :initarg :reader
+         :reader <code class="relevant"><a href="#dictionary_reader">class-options:reader</a></code>
+         :type <code>symbol</code>
+         :documentation "Names the reader function that was called.")
+ (<var>required-mixin</var> :initarg :required-mixin
+                 :reader <code class="relevant"><a href="#dictionary_required-mixin">class-options:required-mixin</a></code>
+                 :type <code>symbol</code>
+                 :documentation "Names the mixin that the class should inherit from
+                                 for the reader function that was called to return the requested information."))</code></pre>
+              <p>The consequences are undefined if the <code>:reader</code> or <code>:required-mixin</code> initargs are unsupplied.</p>
+            </section>
+
+          </article>
+
+          <article class="generic-function reader definition" id="dictionary_reader">
+
+            <h1><span class="type">Generic Function</span> <span class="name self">class-options:reader</span></h1>
+
+            <p class="args-and-retvals"><var>object</var> =&gt; <var>reader-name</var></p>
+
+            <section class="description">
+              <h1>Description</h1>
+              <p>See above.</p>
+            </section>
+
+          </article>
+
+          <article class="generic-function reader definition" id="dictionary_required-mixin">
+
+            <h1><span class="type">Generic Function</span> <span class="name self">class-options:required-mixin</span></h1>
+
+            <p class="args-and-retvals"><var>object</var> =&gt; <var>mixin-name</var></p>
+
+            <section class="description">
+              <h1>Description</h1>
+              <p>See above.</p>
+            </section>
+
+          </article>
+
+        </section>
+
+        <nav class="end-of-section-indicator">
+          <a href="#dictionary">
+            "<span>Dictionary</span>" end.
+          </a>
+        </nav>
+
+      </section>
+
+    </main>
+
+    <footer id="footer">
+      <div class="back-to-top left">
+        <a href="#">⬆</a>
+      </div>
+      <div class="main">
+        <a href="https://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fclass-options%2F">✔ HTML5</a>
+        <a href="https://www.hexstreamsoft.com/README">✔ Public Domain</a>
+        <a href="https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fclass-options%2F">✔ CSS3</a>
+        <a>✔ Mobile-friendly</a>
+      </div>
+      <div class="back-to-top right">
+        <a href="#">⬆</a>
+      </div>
+    </footer>
+
+  </body>
+</html>
