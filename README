@@ -1,7 +1,8 @@
 Project's home: https://www.hexstreamsoft.com/libraries/class-options/
 
 
-class-options provides easy access to the defining class and its options during initialization.
+class-options provides easy access to the defining class and its options
+during initialization or reinitialization of its subcomponents.
 
 
 This library is in the Public Domain.

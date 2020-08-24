@@ -4,7 +4,7 @@
 
   :license "Unlicense"
 
-  :description "Provides easy access to the defining class and its options during initialization."
+  :description "Provides easy access to the defining class and its options during initialization or reinitialization of its subcomponents."
 
   :depends-on ("closer-mop")
 
