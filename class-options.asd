@@ -8,7 +8,7 @@
 
   :depends-on ("closer-mop")
 
-  :version "1.0"
+  :version "1.0.1"
   :serial cl:t
   :components ((:file "package")
                (:file "conditions")

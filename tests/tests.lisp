@@ -23,7 +23,7 @@
 (defclass class-direct-slot (c2mop:standard-direct-slot-definition)
   ((%class-that-was-passed :accessor class-that-was-passed)))
 
-(defmethod c2mop:direct-slot-definition-class ((class class-test) &key)
+(defmethod c2mop:direct-slot-definition-class ((class class-test) &key &allow-other-keys)
   (find-class 'class-direct-slot))
 
 (defmethod initialize-instance :before ((direct-slot class-direct-slot) &key)
@@ -38,7 +38,7 @@
 (defclass options-direct-slot (c2mop:standard-direct-slot-definition)
   ((%options-that-were-passed :accessor options-that-were-passed)))
 
-(defmethod c2mop:direct-slot-definition-class ((options options-test) &key)
+(defmethod c2mop:direct-slot-definition-class ((options options-test) &key &allow-other-keys)
   (find-class 'options-direct-slot))
 
 (defmethod initialize-instance :before ((direct-slot options-direct-slot) &key)
@@ -55,7 +55,7 @@
 (defclass operation-direct-slot (c2mop:standard-direct-slot-definition)
   ((%operation-that-was-passed :accessor operation-that-was-passed)))
 
-(defmethod c2mop:direct-slot-definition-class ((options operation-test) &key)
+(defmethod c2mop:direct-slot-definition-class ((options operation-test) &key &allow-other-keys)
   (find-class 'operation-direct-slot))
 
 (defmethod initialize-instance :before ((direct-slot operation-direct-slot) &key)
@@ -69,7 +69,7 @@
 (defclass class-options-direct-slot (class-direct-slot options-direct-slot)
   ())
 
-(defmethod c2mop:direct-slot-definition-class ((class class-options-test) &key)
+(defmethod c2mop:direct-slot-definition-class ((class class-options-test) &key &allow-other-keys)
   (find-class 'class-options-direct-slot))
 
 
@@ -79,7 +79,7 @@
 (defclass class-options-operation-direct-slot (class-direct-slot options-direct-slot operation-direct-slot)
   ())
 
-(defmethod c2mop:direct-slot-definition-class ((class class-options-operation-test) &key)
+(defmethod c2mop:direct-slot-definition-class ((class class-options-operation-test) &key &allow-other-keys)
   (find-class 'class-options-operation-direct-slot))
 
 
